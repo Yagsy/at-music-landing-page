@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@87.5,100..900&display=swap');
+
+:root {
+    --purple500: #281154;
+    --purple300: #270082;
+    --purple600: #1b0058;
+    --red600: #dc0000;
+    --body: #f9f6ff;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: var(--purple300);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+button {
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: none;
+    transition: 0.4s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li {
+    transition: 0.5s ease-in;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li:hover {
+    border-bottom: 2px solid white;
+}
+
+.hero_section {
+    background-image: url(https://images.unsplash.com/photo-1470225620780-dba8ba36b745?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: grid;
+    color: white;
+    place-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero_section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero_section h1 {
+    font-size: 90px;
+}
+
+.hero_section h3 {
+    font-size: 30px;
+}
+
+.music_section {
+    padding-top: 50px;
+    background-color: var(--purple500);
+}
+
+.music_section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ipad_img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.primary_btn {
+    background-color: var(--red600);
+    color: white;
+}
+
+.secondary_btn {
+    background-color: var(--purple300);
+    color: white;
+}
+
+.about_music {
+    padding-top: 250px;
+    display: grid;
+    place-items: center;
+    gap: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 15px;
+}
+
+.about_music img {
+    max-width: 100%;
+    height: auto;
+}
+
+.video_section {
+    background-image: url(https://i.pinimg.com/originals/52/ac/fc/52acfc1e6598d73354ae7c78a72462e7.gif);
+    min-height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.video_section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: -150px;
+}
+
+.gift_section {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.gift_card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.gift_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+}
+
+.upper_footer {
+    background-color: var(--purple600);
+    padding: 20px;
+}
+
+.upper_footer .container {
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.upper_footer h4 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.footer_lower {
+    background-color: var(--purple300);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .hero_section h1 {
+        font-size: 60px;
+    }
+
+    .hero_section h3 {
+        font-size: 22px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+}
+
+/* Mob*/
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero_section h1 {
+        font-size: 45px;
+    }
+
+    .hero_section h3 {
+        font-size: 18px;
+    }
+
+    .about_music {
+        padding-top: 100px;
+    }
+
+    .gift_section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video_section {
+        min-height: 500px;
+        margin-top: 50px;
+    }
+}
+
+/* Sm Mob */
+@media (max-width: 480px) {
+    .hero_section h1 {
+        font-size: 32px;
+    }
+
+    .hero_section h3 {
+        font-size: 16px;
+    }
+
+    .music_section h2 {
+        font-size: 22px;
+    }
+
+    .ipad_img {
+        margin-left: 0;
+        top: 0;
+    }
+}
